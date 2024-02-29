@@ -76,4 +76,11 @@ const Card = styled.div`
     align-items: center;
   }
 `;
+
+const Gradient= styled.div`
+width: 100%;
+height: 100%;
+z-index:3;
+background: linear-gradient(rgba(0,0,0,0),(0,0,0,0.5));
+`
 export default Popular;

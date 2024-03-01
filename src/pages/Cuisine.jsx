@@ -1,11 +1,9 @@
-import React from 'react'
+import { useParams, Link } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 function Cuisine() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default Cuisine
+export default Cuisine;

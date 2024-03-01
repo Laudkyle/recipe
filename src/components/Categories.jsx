@@ -1,4 +1,4 @@
-import { FaHumburger, FaPizzaSplice } from "react-icons/fa";
+import { FaPizzaSlice,FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
 import styled from "styled-components";
 
@@ -6,11 +6,11 @@ function Categories() {
   return (
     <div>
       <div>
-        <FaHumburger />
+        <FaHamburger />
         <h4>American</h4>
       </div>
       <div>
-        <FaPizzaSplice />
+        <FaPizzaSlice />
         <h4>Italian</h4>
       </div>
       <div>

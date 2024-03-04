@@ -19,18 +19,20 @@ function Cuisine() {
     getCuisine(params.type);
   }, [params.type]);
 
-  return <Grid>
-    {cuisine.map((item) =>{
-        return(
-            <Card key={item.id}>
+  return (
+    <Grid>
+      {cuisine.map((item) => {
+        return (
+          <Card key={item.id}>
             <Link to={"recipe/" + item.id}>
-            <img src={item.image} alt={item.title} />
-            <h4>{item.title}</h4>
+              <img src={item.image} alt={item.title} />
+              <h4>{item.title}</h4>
             </Link>
-            </Card>
+          </Card>
         );
-    })}
-  </Grid>;
+      })}
+    </Grid>
+  );
 }
 
 const Grid = styled.div`
@@ -39,17 +41,17 @@ const Grid = styled.div`
   grid-gap: 1rem;
 `;
 const Card = styled.div`
-    img{
-        border-radius:2rem;
-        width:100%;
-    }
-    a{
-        text-decoration: none;
-    }
-    h4{
-        text-align: center;
-        padding: 1rem;
-    }
-`
+  img {
+    border-radius: 2rem;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  h4 {
+    text-align: center;
+    padding: 1rem;
+  }
+`;
 
 export default Cuisine;

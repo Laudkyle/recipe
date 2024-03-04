@@ -16,7 +16,7 @@ function Recipe() {
     const detailData = await data.json();
     setDetails(detailData);
   };
-  return <div>Recipe</div>;
+  return <div></div>;
 }
 
 export default Recipe;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 function Recipe() {
   let params = useParams();
   const [details, setDetails] = useState({});
-  const[activeTab, setActiveTab] = useState('instructions');
+  const [activeTab, setActiveTab] = useState("instructions");
 
   useEffect(() => {
     fetchDetails();
@@ -17,16 +17,35 @@ function Recipe() {
     const detailData = await data.json();
     setDetails(detailData);
   };
-  return <DetailsWrapper>
-  <div>
-    <h2>{details.title}</h2>
-    <img src={details.image} alt={details.title} />
-  </div>
-  <Info>
-    <Button className={activeTab === 'instructions' ? 'active':''} onClick={() =>{setActiveTab('instructions')}}>Instructions</Button>
-    <Button className={activeTab === 'ingredients' ? 'active':''} onClick={() =>{setActiveTab('ingredients')}}>Ingredients</Button>
-  </Info>
-  </DetailsWrapper>;
+  return (
+    <DetailsWrapper>
+      <div>
+        <h2>{details.title}</h2>
+        <img src={details.image} alt={details.title} />
+      </div>
+      <Info>
+        <Button
+          className={activeTab === "instructions" ? "active" : ""}
+          onClick={() => {
+            setActiveTab("instructions");
+          }}
+        >
+          Instructions
+        </Button>
+        <Button
+          className={activeTab === "ingredients" ? "active" : ""}
+          onClick={() => {
+            setActiveTab("ingredients");
+          }}
+        >
+          Ingredients
+        </Button>
+        <div>
+          <h3 dangerouslySetInnerHTML={{__html:details.summary}}></h3>
+        </div>
+      </Info>
+    </DetailsWrapper>
+  );
 }
 
 const DetailsWrapper = styled.div`

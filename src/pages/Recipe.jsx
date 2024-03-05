@@ -5,6 +5,7 @@ import styled from "styled-components";
 function Recipe() {
   let params = useParams();
   const [details, setDetails] = useState({});
+  const[activeTab, setActiveTab] = useState('instructions');
 
   useEffect(() => {
     fetchDetails();
@@ -22,8 +23,8 @@ function Recipe() {
     <img src={details.image} alt={details.title} />
   </div>
   <Info>
-    <Button>Instructions</Button>
-    <Button>Ingredients</Button>
+    <Button className={activeTab === 'instructions' ? 'active':''} onClick={() =>{setActiveTab('instructions')}}>Instructions</Button>
+    <Button className={activeTab === 'ingredients' ? 'active':''} onClick={() =>{setActiveTab('ingredients')}}>Ingredients</Button>
   </Info>
   </DetailsWrapper>;
 }

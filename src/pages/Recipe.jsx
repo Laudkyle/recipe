@@ -43,6 +43,11 @@ function Recipe() {
         <div>
           <h3 dangerouslySetInnerHTML={{__html:details.summary}}></h3>
           <h3 dangerouslySetInnerHTML={{__html:details.instructions}}></h3>
+          <ul>
+            {details.extendedIngredients.map((ingredient) => {
+              <li>{ingredient.original}</li>
+            })}
+          </ul>
         </div>
       </Info>
     </DetailsWrapper>

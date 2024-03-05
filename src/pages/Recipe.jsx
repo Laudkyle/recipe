@@ -16,7 +16,12 @@ function Recipe() {
     const detailData = await data.json();
     setDetails(detailData);
   };
-  return <div>{details.title}</div>;
+  return <DetailsWrapper>
+  <div>
+    <h2>{details.title}</h2>
+    <img src={details.image} alt={details.title} />
+  </div>
+  </DetailsWrapper>;
 }
 
 const DetailsWrapper = styled.div`

@@ -21,6 +21,10 @@ function Recipe() {
     <h2>{details.title}</h2>
     <img src={details.image} alt={details.title} />
   </div>
+  <Info>
+    <Button>Instructions</Button>
+    <Button>Ingredients</Button>
+  </Info>
   </DetailsWrapper>;
 }
 

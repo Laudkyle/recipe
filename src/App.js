@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Nav>
-        <Logo />
+        <Logo to={'/'} />
       </Nav>
         <Search />
         <Categories />

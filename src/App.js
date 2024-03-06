@@ -8,6 +8,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Nav>
+        <Logo />
+      </Nav>
         <Search />
         <Categories />
         <Pages />
